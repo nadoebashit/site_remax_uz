@@ -1,0 +1,528 @@
+/* 
+ * RE/MAX Academy Kazakhstan Landing Page
+ * Conversion Optimization Enhancements
+ */
+
+/* Enhanced CTA Buttons */
+.btn-primary {
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-primary::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.2);
+    transition: all 0.5s ease;
+}
+
+.btn-primary:hover::after {
+    left: 100%;
+}
+
+/* Sticky CTA for mobile */
+@media (max-width: 768px) {
+    .sticky-cta {
+        display: flex;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background-color: rgba(15, 15, 15, 0.95);
+        padding: 10px 20px;
+        z-index: 1000;
+        box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.2);
+        justify-content: center;
+        backdrop-filter: blur(10px);
+    }
+    
+    .sticky-cta .btn-primary {
+        width: 100%;
+        max-width: 300px;
+    }
+    
+    body {
+        padding-bottom: 60px; /* Space for sticky CTA */
+    }
+}
+
+/* Focus styles for form elements */
+input:focus, 
+textarea:focus, 
+select:focus {
+    outline: 2px solid var(--remax-red);
+    box-shadow: 0 0 0 4px rgba(230, 26, 26, 0.2);
+}
+
+/* Highlight important text */
+.highlight {
+    color: var(--remax-red);
+    font-weight: 600;
+}
+
+/* Testimonial trust indicators */
+.testimonial-verification {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: var(--text-muted);
+    font-size: 12px;
+    margin-top: 10px;
+}
+
+.testimonial-verification i {
+    color: #4CAF50;
+}
+
+/* Social proof elements */
+.social-proof {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    margin: 40px 0;
+    flex-wrap: wrap;
+}
+
+.social-proof-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.social-proof-number {
+    font-size: 36px;
+    font-weight: 700;
+    color: var(--remax-red);
+    margin-bottom: 5px;
+}
+
+.social-proof-text {
+    font-size: 14px;
+    color: var(--text-secondary);
+}
+
+/* Limited time offer badge */
+.limited-offer {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background-color: var(--remax-red);
+    color: white;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 5px 10px;
+    border-radius: 20px;
+    z-index: 1;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+/* Countdown timer */
+.countdown {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.countdown-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--bg-card);
+    padding: 10px;
+    border-radius: 5px;
+    min-width: 60px;
+}
+
+.countdown-number {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--remax-red);
+}
+
+.countdown-label {
+    font-size: 12px;
+    color: var(--text-secondary);
+}
+
+/* Trust badges */
+.trust-badges {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin: 30px 0;
+    flex-wrap: wrap;
+}
+
+.trust-badge {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: var(--text-secondary);
+    font-size: 14px;
+}
+
+.trust-badge i {
+    color: var(--remax-red);
+}
+
+/* Exit intent modal */
+.exit-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 2000;
+    justify-content: center;
+    align-items: center;
+    animation: fadeIn 0.3s ease-out;
+}
+
+.exit-modal.active {
+    display: flex;
+}
+
+.exit-modal-content {
+    background-color: var(--bg-card);
+    border-radius: 10px;
+    padding: 30px;
+    max-width: 500px;
+    width: 90%;
+    position: relative;
+    text-align: center;
+}
+
+.exit-modal-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    color: var(--text-secondary);
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.exit-modal-title {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: var(--remax-red);
+}
+
+.exit-modal-text {
+    margin-bottom: 20px;
+}
+
+/* Scroll progress indicator */
+.scroll-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background-color: var(--remax-red);
+    z-index: 2000;
+    transition: width 0.1s ease;
+}
+
+/* Back to top button */
+.back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    background-color: var(--remax-red);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 1000;
+}
+
+.back-to-top.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+.back-to-top:hover {
+    transform: translateY(-5px);
+}
+
+/* Enrollment form enhancements */
+.enrollment-form {
+    background-color: var(--bg-card);
+    padding: 30px;
+    border-radius: 10px;
+    margin-top: 30px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+
+.form-input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    background-color: var(--bg-dark);
+    color: var(--text-primary);
+    font-family: var(--font-primary);
+    transition: all 0.3s ease;
+}
+
+.form-input:focus {
+    border-color: var(--remax-red);
+}
+
+.form-submit {
+    width: 100%;
+    padding: 15px;
+    margin-top: 10px;
+}
+
+/* Form validation styles */
+.form-input.error {
+    border-color: #ff4d4d;
+}
+
+.error-message {
+    color: #ff4d4d;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+/* Success message */
+.success-message {
+    background-color: rgba(76, 175, 80, 0.1);
+    border: 1px solid #4CAF50;
+    color: #4CAF50;
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    display: none;
+}
+
+.success-message.active {
+    display: block;
+    animation: fadeIn 0.5s ease-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Floating labels for form inputs */
+.form-floating {
+    position: relative;
+}
+
+.form-floating .form-input {
+    padding: 20px 15px 10px;
+}
+
+.form-floating .form-label {
+    position: absolute;
+    top: 12px;
+    left: 15px;
+    transition: all 0.3s ease;
+    pointer-events: none;
+    color: var(--text-muted);
+}
+
+.form-floating .form-input:focus ~ .form-label,
+.form-floating .form-input:not(:placeholder-shown) ~ .form-label {
+    top: 5px;
+    font-size: 12px;
+    color: var(--remax-red);
+}
+
+/* Enrollment steps progress */
+.enrollment-progress {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.enrollment-progress::before {
+    content: '';
+    position: absolute;
+    top: 20px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--border-color);
+    z-index: 1;
+}
+
+.progress-step {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 60px;
+}
+
+.progress-step-number {
+    width: 40px;
+    height: 40px;
+    background-color: var(--bg-card);
+    border: 2px solid var(--border-color);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.progress-step.active .progress-step-number {
+    background-color: var(--remax-red);
+    border-color: var(--remax-red);
+    color: white;
+}
+
+.progress-step.completed .progress-step-number {
+    background-color: #4CAF50;
+    border-color: #4CAF50;
+    color: white;
+}
+
+.progress-step-label {
+    font-size: 12px;
+    text-align: center;
+    color: var(--text-secondary);
+}
+
+.progress-step.active .progress-step-label {
+    color: var(--text-primary);
+    font-weight: 500;
+}
+
+/* Conversion-focused animations */
+@keyframes attention {
+    0% { transform: scale(1); }
+    5% { transform: scale(1.1); }
+    10% { transform: scale(1); }
+    15% { transform: scale(1.1); }
+    20% { transform: scale(1); }
+    100% { transform: scale(1); }
+}
+
+.attention-animation {
+    animation: attention 10s infinite;
+    animation-delay: 5s;
+}
+
+/* Scroll reveal animations */
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Staggered reveal for grid items */
+.stagger-reveal > * {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease;
+}
+
+.stagger-reveal > *:nth-child(1) { transition-delay: 0.1s; }
+.stagger-reveal > *:nth-child(2) { transition-delay: 0.2s; }
+.stagger-reveal > *:nth-child(3) { transition-delay: 0.3s; }
+.stagger-reveal > *:nth-child(4) { transition-delay: 0.4s; }
+.stagger-reveal > *:nth-child(5) { transition-delay: 0.5s; }
+.stagger-reveal > *:nth-child(6) { transition-delay: 0.6s; }
+
+.stagger-reveal.active > * {
+    opacity: 1;
+    transform: translateY(0);
+}
+.enroll-modal {
+    display: none;
+    position: fixed;
+    z-index: 3000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+    animation: fadeIn 0.3s ease-out;
+}
+
+.enroll-modal.active {
+    display: flex;
+}
+
+.enroll-modal-content {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 30px;
+    max-width: 500px;
+    width: 90%;
+    position: relative;
+    text-align: left;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.enroll-modal-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    color: var(--text-muted);
+}
+
+.enroll-modal h3 {
+    font-size: 20px;
+    color: var(--remax-red);
+    margin-bottom: 20px;
+}
+.modal-title {
+    text-align: center;
+}

@@ -1,0 +1,1228 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>RE/MAX Узбекистан — Кодекс по этике</title>
+    <meta name="description" content="Практическое руководство для агентов и франчайзи, устанавливающее стандарты работы, временные рамки и запреты. НАШИ ПРИНЦИПЫ:" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --remax-red: #e30613;
+            --remax-blue: #0054a6;
+            --remax-dark-blue: #003d7a;
+            --ink: #0f172a;
+            --muted: #475569;
+            --bg: #ffffff;
+            --bg-alt: #f8fafc;
+            --bg-gradient: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+            --card: #ffffff;
+            --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            --shadow-xl: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+            --radius: 16px;
+            --radius-lg: 24px;
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background: var(--bg-gradient);
+            color: var(--ink);
+            font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, Ubuntu, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            font-size: 16px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* Enhanced Hero Section */
+        .hero {
+            position: relative;
+            background: linear-gradient(135deg, var(--remax-blue) 0%, var(--remax-dark-blue) 50%, #1e40af 100%);
+            color: white;
+            padding: 80px 0 120px;
+            margin-bottom: 40px;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><defs><radialGradient id="g1" cx="20%" cy="30%"><stop offset="0%" stop-color="white" stop-opacity="0.1"/><stop offset="100%" stop-color="white" stop-opacity="0"/></radialGradient><radialGradient id="g2" cx="80%" cy="70%"><stop offset="0%" stop-color="white" stop-opacity="0.08"/><stop offset="100%" stop-color="white" stop-opacity="0"/></radialGradient></defs><circle cx="200" cy="300" r="300" fill="url(%23g1)"/><circle cx="800" cy="700" r="400" fill="url(%23g2)"/></svg>') center/cover;
+            pointer-events: none;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            animation: fadeInUp 1s ease-out;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 800;
+            margin: 0 0 20px;
+            letter-spacing: -0.02em;
+            background: linear-gradient(135deg, #ffffff 0%, #e2e8f0 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            margin: 0 0 40px;
+            opacity: 0.9;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero-badges {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 40px;
+        }
+
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: white;
+            padding: 12px 20px;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: var(--transition);
+            cursor: pointer;
+        }
+
+        .badge:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateY(-2px);
+        }
+
+        .badge svg {
+            width: 20px;
+            height: 20px;
+        }
+
+        /* Enhanced Navigation */
+        .nav-container {
+            position: sticky;
+            top: 0;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(226, 232, 240, 0.8);
+            z-index: 100;
+            transition: var(--transition);
+        }
+
+        .nav-container.scrolled {
+            box-shadow: var(--shadow);
+        }
+
+        .nav {
+            display: flex;
+            gap: 12px;
+            padding: 16px 0;
+            overflow-x: auto;
+            scrollbar-width: none;
+            -ms-overflow-style: none;
+        }
+
+        .nav::-webkit-scrollbar {
+            display: none;
+        }
+
+        .nav-item {
+            padding: 12px 20px;
+            border-radius: 12px;
+            background: var(--bg-alt);
+            border: 1px solid #e2e8f0;
+            color: var(--ink);
+            font-weight: 600;
+            text-decoration: none;
+            white-space: nowrap;
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .nav-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+            transition: left 0.5s;
+        }
+
+        .nav-item:hover::before {
+            left: 100%;
+        }
+
+        .nav-item:hover,
+        .nav-item.active {
+            background: var(--remax-red);
+            color: white;
+            border-color: #c60f16;
+            transform: translateY(-2px);
+            box-shadow: var(--shadow);
+        }
+
+        /* Enhanced Cards */
+        .section {
+            margin: 40px 0;
+        }
+
+        .card {
+            background: var(--card);
+            border: 1px solid rgba(226, 232, 240, 0.8);
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow);
+            padding: 32px;
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--remax-red), var(--remax-blue));
+            opacity: 0;
+            transition: var(--transition);
+        }
+
+        .card:hover {
+            box-shadow: var(--shadow-lg);
+            transform: translateY(-4px);
+        }
+
+        .card:hover::before {
+            opacity: 1;
+        }
+
+        .card h2 {
+            margin: 0 0 20px;
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--ink);
+            position: relative;
+        }
+
+        .card h2::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background: var(--remax-red);
+            border-radius: 2px;
+        }
+
+        /* Red Rules Grid */
+        .red-rules {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 24px;
+        }
+
+        .red-rule {
+            background: #f1f1f1 0%, #fd0000 100%);
+            color: rgb(255, 4, 4);
+            border-radius: var(--radius);
+            padding: 24px;
+            border: 2px solid #b50b14;
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .red-rule::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+            transition: var(--transition);
+            transform: scale(0);
+        }
+
+        .red-rule:hover::before {
+            transform: scale(1);
+        }
+
+        .red-rule:hover {
+            transform: translateY(-4px) scale(1.02);
+            box-shadow: var(--shadow-xl);
+        }
+
+        /* Icon Cards */
+      
+        .icon-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 24px;
+            margin-top: 24px;
+        }
+
+        @media (max-width: 768px) {
+            .icon-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .icon-card {
+            display: flex;
+            gap: 20px;
+            align-items: flex-start;
+            padding: 24px;
+            border: 1px solid #e2e8f0;
+            border-radius: var(--radius);
+            background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .icon-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(14, 165, 233, 0.1), transparent);
+            transition: left 0.6s;
+        }
+
+        .icon-card:hover::before {
+            left: 100%;
+        }
+
+        .icon-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-lg);
+            border-color: var(--remax-blue);
+        }
+
+        .icon {
+            width: 56px;
+            height: 56px;
+            border-radius: 16px;
+            display: grid;
+            place-items: center;
+            background: linear-gradient(135deg, var(--remax-blue) 0%, var(--remax-dark-blue) 100%);
+            color: white;
+            flex-shrink: 0;
+            transition: var(--transition);
+        }
+
+        .icon-card:hover .icon {
+            transform: rotate(5deg) scale(1.1);
+        }
+
+        .icon svg {
+            width: 28px;
+            height: 28px;
+        }
+
+        /* Enhanced Accordions */
+        .accordion {
+            border: 1px solid #e2e8f0;
+            border-radius: var(--radius);
+            margin-bottom: 16px;
+            background: white;
+            overflow: hidden;
+            transition: var(--transition);
+        }
+
+        .accordion:hover {
+            box-shadow: var(--shadow);
+        }
+
+        .accordion-header {
+            padding: 20px 24px;
+            cursor: pointer;
+            font-weight: 700;
+            font-size: 1.1rem;
+            background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+            border-bottom: 1px solid #e2e8f0;
+            transition: var(--transition);
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .accordion-header:hover {
+            background: linear-gradient(135deg, var(--remax-blue) 0%, var(--remax-dark-blue) 100%);
+            color: white;
+        }
+
+        .accordion-icon {
+            width: 20px;
+            height: 20px;
+            transition: transform 0.3s ease;
+        }
+
+        .accordion.open .accordion-icon {
+            transform: rotate(180deg);
+        }
+
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+
+        .accordion.open .accordion-content {
+            max-height: 500px;
+        }
+
+        .accordion-body {
+            padding: 24px;
+        }
+
+        /* Interactive Elements */
+        .interactive-checklist {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            margin-top: 24px;
+        }
+
+        .checklist-item {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            padding: 16px 20px;
+            border: 2px dashed #cbd5e1;
+            border-radius: var(--radius);
+            transition: var(--transition);
+            cursor: pointer;
+        }
+
+        .checklist-item:hover {
+            border-color: var(--remax-blue);
+            background: rgba(0, 84, 166, 0.05);
+        }
+
+        .checklist-item.completed {
+            border-style: solid;
+            border-color: #16a34a;
+            background: rgba(22, 163, 74, 0.1);
+        }
+
+        .checklist-item input[type="checkbox"] {
+            width: 20px;
+            height: 20px;
+            accent-color: var(--remax-red);
+            cursor: pointer;
+        }
+
+        /* Enhanced Table */
+        .timeline-table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0;
+            margin-top: 24px;
+            overflow: hidden;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+        }
+
+        .timeline-table thead {
+            background: linear-gradient(135deg, var(--remax-blue) 0%, var(--remax-dark-blue) 100%);
+            color: white;
+        }
+
+        .timeline-table th {
+            padding: 20px 24px;
+            font-weight: 600;
+            text-align: left;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .timeline-table tbody tr {
+            background: white;
+            transition: var(--transition);
+        }
+
+        .timeline-table tbody tr:hover {
+            background: rgba(0, 84, 166, 0.05);
+            transform: scale(1.01);
+        }
+
+        .timeline-table td {
+            padding: 20px 24px;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        .timeline-table tbody tr:last-child td {
+            border-bottom: none;
+        }
+
+        /* Floating Action Button */
+        .fab {
+            position: fixed;
+            right: 24px;
+            bottom: 24px;
+            width: 56px;
+            height: 56px;
+            background: linear-gradient(135deg, var(--remax-red) 0%, #c60f16 100%);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            box-shadow: var(--shadow-lg);
+            cursor: pointer;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition);
+            z-index: 1000;
+        }
+
+        .fab.show {
+            display: flex;
+        }
+
+        .fab:hover {
+            transform: translateY(-4px) scale(1.1);
+            box-shadow: var(--shadow-xl);
+        }
+
+        .fab svg {
+            width: 24px;
+            height: 24px;
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateX(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .animate-in {
+            animation: fadeInUp 0.6s ease-out;
+        }
+
+        .animate-slide {
+            animation: slideIn 0.8s ease-out;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 16px;
+            }
+
+            .hero {
+                padding: 60px 0 80px;
+            }
+
+            .card {
+                padding: 24px;
+            }
+
+            .red-rules {
+                grid-template-columns: 1fr;
+            }
+
+            .icon-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .nav {
+                gap: 8px;
+            }
+
+            .nav-item {
+                padding: 10px 16px;
+                font-size: 0.9rem;
+            }
+        }
+
+        /* Dark mode support */
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg: #0f172a;
+                --bg-alt: #1e293b;
+                --bg-gradient: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+                --card: #1e293b;
+                --ink: #f1f5f9;
+                --muted: #94a3b8;
+            }
+        }
+
+        /* Print styles */
+        @media print {
+            .nav-container,
+            .fab,
+            .hero-badges {
+                display: none;
+            }
+
+            .hero {
+                background: var(--remax-blue);
+                color: white;
+                padding: 40px 0;
+            }
+
+            .card {
+                box-shadow: none;
+                border: 1px solid #e2e8f0;
+                margin-bottom: 20px;
+                break-inside: avoid;
+            }
+        }
+    </style>
+</head>
+<body>
+    <img src="remax-logo.png" alt="RE/MAX Logo" style="
+        position: absolute;
+        top: 16px;
+        left: 16px;
+        height: 9vw;
+        max-height: 50px;
+        width: auto;
+        z-index: 1000;">
+    <div class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Кодекс по этике RE/MAX Узбекистан</h1>
+                <p>Практическое руководство для агентов и франчайзи, устанавливающее стандарты работы, временные рамки и запреты. <br> НАШИ ПРИНЦИПЫ:</p>
+                <div class="hero-badges">
+                    <div class="badge">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M20.84 4.61a5.5 5.5 0 0 1 0 7.78L12 21.23l-8.84-8.84a5.5 5.5 0 1 1 7.78-7.78L12 5.5l1.06-1.06a5.5 5.5 0 0 1 7.78 0z"/>
+                        </svg>
+                        Доверие
+                    </div>
+                    <div class="badge">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"/>
+                            <path d="M12 6v6l4 2"/>
+                        </svg>
+                        Профессионализм
+                    </div>
+                    <div class="badge">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 5v14M5 12h14"/>
+                        </svg>
+                        Сотрудничество
+                    </div>
+                    <div class="badge">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 15a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4"/>
+                            <circle cx="12" cy="7" r="3"/>
+                        </svg>
+                        Уважение
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="nav-container" id="navContainer">
+        <div class="container">
+            <nav class="nav" id="nav">
+                <a href="#principles" class="nav-item">Принципы</a>
+                <a href="#clients" class="nav-item">Клиенты</a>
+                <a href="#colleagues" class="nav-item">Коллеги</a>
+                <a href="#society" class="nav-item">Общество</a>
+                <a href="#red-rules" class="nav-item active">Красные правила</a>
+                <a href="#finance" class="nav-item">Финансы</a>
+                <a href="#advertising" class="nav-item">Реклама</a>
+                <a href="#timelines" class="nav-item">Сроки</a>
+                <a href="#daily" class="nav-item">Ежедневно</a>
+                <a href="#ethics" class="nav-item">Комитет</a>
+            </nav>
+        </div>
+    </div>
+
+    <div class="container">
+        
+        <section id="principles" class="section">
+            <div class="card animate-slide">
+                <h2>Наши Принципы и ценности</h2>
+                <div class="icon-grid">
+                    <div class="icon-card">
+                        <div class="icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                                <circle cx="12" cy="7" r="4"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 style="margin: 0 0 8px; font-size: 1.25rem;">Честность и уважение</h3>
+                            <p style="color: var(--muted); margin: 0;">Говорим правду, держим слово, относимся корректно к клиентам и коллегам.</p>
+                        </div>
+                    </div>
+                    <div class="icon-card">
+                        <div class="icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M12 1v22M1 12h22"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 style="margin: 0 0 8px; font-size: 1.25rem;">Сотрудничество</h3>
+                            <p style="color: var(--muted); margin: 0;">Мы усиливаем друг друга и ставим интересы клиента выше личных.</p>
+                        </div>
+                    </div>
+                    <div class="icon-card">
+                        <div class="icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"/>
+                                <path d="M12 6v6l4 2"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 style="margin: 0 0 8px; font-size: 1.25rem;">Профессионализм</h3>
+                            <p style="color: var(--muted); margin: 0;">Знаем рынок, документируем сделки, соблюдаем закон и стандарты RE/MAX.</p>
+                        </div>
+                    </div>
+                    <div class="icon-card">
+                        <div class="icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M3 11l2-2 4 4L21 3"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 style="margin: 0 0 8px; font-size: 1.25rem;">Ответственность</h3>
+                            <p style="color: var(--muted); margin: 0;">Несём ответственность за свои действия перед клиентом, обществом и брендом.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="clients" class="section">
+            <div class="card">
+                <h2>Обязанности перед клиентами</h2>
+                <div class="accordion open">
+                    <div class="accordion-header" onclick="toggleAccordion(this)">
+                        Честные данные об объекте и сделке
+                        <svg class="accordion-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M6 9l6 6 6-6"/>
+                        </svg>
+                    </div>
+                    <div class="accordion-content">
+                        <div class="accordion-body">
+                            <ul style="margin: 0; padding-left: 20px;">
+                                <li>Не скрывать явные дефекты и существенные факты о недвижимости.</li>
+                                <li>Не завышать ожидаемую выгоду/скидки от услуг.</li>
+                                <li>Оперативно передавать и согласовывать предложения всех сторон.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion">
+                    <div class="accordion-header" onclick="toggleAccordion(this)">
+                        Конфиденциальность
+                        <svg class="accordion-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M6 9l6 6 6-6"/>
+                        </svg>
+                    </div>
+                    <div class="accordion-content">
+                        <div class="accordion-body">
+                            <ul style="margin: 0; padding-left: 20px;">
+                                <li>Не разглашать и не использовать данные клиента в ущерб, включая период после завершения сотрудничества.</li>
+                                <li>Исключения — только по закону и/или с письменного согласия клиента.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion">
+                    <div class="accordion-header" onclick="toggleAccordion(this)">
+                        Конфликт интересов и собственные сделки
+                        <svg class="accordion-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M6 9l6 6 6-6"/>
+                        </svg>
+                    </div>
+                    <div class="accordion-content">
+                        <div class="accordion-body">
+                            <ul style="margin: 0; padding-left: 20px;">
+                                <li>Раскрывать свою заинтересованность в объекте или выгоде от сделки до подписания договоров.</li>
+                                <li>Не принимать комиссию/вознаграждения от третьих лиц без письменного согласия клиента.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="colleagues" class="section">
+            <div class="card">
+                <h2>Обязанности перед коллегами</h2>
+                <div class="accordion open">
+                    <div class="accordion-header" onclick="toggleAccordion(this)">
+                        Сотрудничество и уважение
+                        <svg class="accordion-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M6 9l6 6 6-6"/>
+                        </svg>
+                    </div>
+                    <div class="accordion-content">
+                        <div class="accordion-body">
+                            <ul style="margin: 0; padding-left: 20px;">
+                                <li>Сотрудничать с агентами и информировать о ключевых фактах сделки до заключения договора.</li>
+                                <li>Не распространять ложные/вводящие в заблуждение сведения о других агентах и их бизнесе.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion">
+                    <div class="accordion-header" onclick="toggleAccordion(this)">
+                        Эксклюзивы и контакт с собственниками
+                        <svg class="accordion-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M6 9l6 6 6-6"/>
+                        </svg>
+                    </div>
+                    <div class="accordion-content">
+                        <div class="accordion-body">
+                            <ul style="margin: 0; padding-left: 20px;">
+                                <li>Не связываться с собственниками по объектам с действующим эксклюзивным или стандартным договором с другим агентом.</li>
+                                <li>Допустимо консультирование о будущем сотрудничестве <em>после</em> истечения текущего договора.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="society" class="section">
+            <div class="card">
+                <h2>Обязанности перед обществом</h2>
+                <ul style="font-size: 1.1rem; line-height: 1.8;">
+                    <li>Оказание равных услуг без дискриминации по полу, расе, религии, национальности, социальному или семейному статусу.</li>
+                    <li>В публичных объявлениях — только точные данные, актуальные цены и правдивые изображения.</li>
+                    <li>Всегда указывать офис RE/MAX, к которому относится агент.</li>
+                    <li>Носить бейдж с QR‑кодом и предоставлять для проверки по запросу.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="red-rules" class="section">
+            <div class="card animate-in">
+                <h2>Красные правила: Обязательные стандарты поведения</h2>
+                <p style="color: var(--muted); margin-bottom: 24px;">Сосредоточены на основных пунктах, подчеркнутых в исходном документе. Они обязательны к соблюдению.</p>
+                <div class="red-rules">
+                    <div class="red-rule">
+                        <strong>a) Запрещены</strong>: любые финансовые махинации с деньгами клиентов, умышленная дискриминация, причинение экономического ущерба.
+                    </div>
+                    <div class="red-rule">
+                        <strong>b) </strong>Запрещено <strong>намеренно искажать стоимость</strong> недвижимости собственнику при заключении договора.
+                    </div>
+                    <div class="red-rule">
+                        <strong>c) Работаем в сотрудничестве</strong>: все агенты RE/MAX Узбекистан сотрудничают и обмениваются предложениями прозрачно.
+                    </div>
+                    <div class="red-rule">
+                        <strong>d) Соблюдаем региональную систему комиссий</strong> RE/MAX Узбекистан. Условия фиксируются письменно.
+                    </div>
+                    <div class="red-rule">
+                        <strong>e) </strong>Официальные <strong>рефералы оформляются через CRM RE/MAX Узбекистан</strong> и обрабатываются по правилам.
+                    </div>
+                    <div class="red-rule">
+                        <strong>f) Все вознаграждения проходят через офисный счёт</strong> юрлица RE/MAX. Операции через личные счета запрещены.
+                    </div>
+                    <div class="red-rule">
+                        <strong>g) Никакой дискриминации</strong>: равный уровень услуги независимо от пола, расы, религии, национальности, статуса.
+                    </div>
+                    <div class="red-rule">
+                        <strong>h) Идентификация</strong>: агент обязан иметь бейдж RE/MAX с QR‑кодом и предоставлять его для проверки.
+                    </div>
+                    <div class="red-rule">
+                        <strong>i) Без договора — без рекламы</strong>: нельзя рекламировать объект без действующего договора с клиентом.
+                    </div>
+                    <div class="red-rule">
+                        <strong>j) 3 рабочих дня</strong>: после сделки объект должен быть отмечен в CRM как «продан/сдан/арендован».
+                    </div>
+                    <div class="red-rule">
+                        <strong>k) Прозрачная публичная коммуникация</strong>: всегда указывайте, что объявление — предложение агента RE/MAX.
+                    </div>
+                    <div class="red-rule">
+                        <strong>l) Собственность офиса</strong>: листинг и информация по договору — собственность брокерского офиса.
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="finance" class="section">
+            <div class="card">
+                <h2>Финансовая прозрачность</h2>
+                <ul style="font-size: 1.1rem; line-height: 1.8;">
+                    <li><strong>Все комиссионные и расчёты — через офисный счёт</strong> юридического лица RE/MAX.</li>
+                    <li>Запрещены любые операции через личные банковские счета.</li>
+                    <li>Размер и порядок комиссии всегда указываются в договоре до начала услуг.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="advertising" class="section">
+            <div class="card">
+                <h2>Реклама и публичная информация</h2>
+                <ul style="font-size: 1.1rem; line-height: 1.8;">
+                    <li><strong>Нельзя</strong> размещать рекламу объекта без подписанного договора с клиентом.</li>
+                    <li>В объявлениях указывать, что предложение исходит от агента RE/MAX; информация должна быть точной и проверенной.</li>
+                    <li>Фотографии и материалы — использовать правомерно; не нарушать чью‑либо интеллектуальную собственность.</li>
+                    <li>Знаки «Продаётся/Сдаётся» размещать только с согласия соответствующей стороны.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="timelines" class="section">
+            <div class="card">
+                <h2>Требования со сроками</h2>
+                <table class="timeline-table">
+                    <thead>
+                        <tr>
+                            <th>Действие</th>
+                            <th>Срок</th>
+                            <th>Ответственный</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Отметка о продаже/аренде в CRM</td>
+                            <td><strong>3 рабочих дня</strong></td>
+                            <td>Агент</td>
+                        </tr>
+                        <tr>
+                            <td>Передача документов клиенту</td>
+                            <td><strong>24 часа</strong></td>
+                            <td>Агент</td>
+                        </tr>
+                        <tr>
+                            <td>Ответ на запрос коллеги</td>
+                            <td><strong>2 рабочих дня</strong></td>
+                            <td>Агент</td>
+                        </tr>
+                        <tr>
+                            <td>Обновление статуса объекта</td>
+                            <td><strong>Еженедельно</strong></td>
+                            <td>Агент</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section id="daily" class="section">
+            <div class="card">
+                <h2>Ежедневный чек-лист агента</h2>
+                <div class="interactive-checklist">
+                    <label class="checklist-item">
+                        <input type="checkbox" onchange="toggleChecklistItem(this)">
+                        <span>Проверить новые заявки в CRM</span>
+                    </label>
+                    <label class="checklist-item">
+                        <input type="checkbox" onchange="toggleChecklistItem(this)">
+                        <span>Обновить статусы активных объектов</span>
+                    </label>
+                    <label class="checklist-item">
+                        <input type="checkbox" onchange="toggleChecklistItem(this)">
+                        <span>Ответить на сообщения клиентов</span>
+                    </label>
+                    <label class="checklist-item">
+                        <input type="checkbox" onchange="toggleChecklistItem(this)">
+                        <span>Проверить документы по активным сделкам</span>
+                    </label>
+                    <label class="checklist-item">
+                        <input type="checkbox" onchange="toggleChecklistItem(this)">
+                        <span>Носить бейдж RE/MAX с QR-кодом</span>
+                    </label>
+                </div>
+            </div>
+        </section>
+
+        <section id="ethics" class="section">
+            <div class="card">
+                <h2>Комитет по этике</h2>
+                <div class="icon-card" style="margin-top: 24px;">
+                    <div class="icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                        </svg>
+                    </div>
+                    <div>
+                        <h3 style="margin: 0 0 12px; font-size: 1.25rem;">Нарушения этического кодекса</h3>
+                        <p style="color: var(--muted); margin: 0 0 16px;">
+                            Сообщайте о нарушениях или задайте вопрос через форму ниже. Все обращения рассматриваются конфиденциально.
+                        </p>
+
+                        <!-- Trigger Buttons -->
+                        <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+                            <button onclick="openForm('violation')" style="background: var(--remax-red); color: white; border: none; padding: 12px 24px; border-radius: 8px; font-weight: 600; cursor: pointer; transition: var(--transition);">
+                                Сообщить о нарушении
+                            </button>
+                            <button onclick="openForm('question')" style="background: transparent; color: var(--remax-blue); border: 2px solid var(--remax-blue); padding: 10px 24px; border-radius: 8px; font-weight: 600; cursor: pointer; transition: var(--transition);">
+                                Задать вопрос
+                            </button>
+                        </div>
+
+                        <!-- Hidden Form -->
+                        <div id="form-container" style="display:none; margin-top: 24px;">
+                            <h4 id="form-title" style="margin-bottom: 16px;">Связаться с комитетом по этике</h4>
+                            <form id="ethics-form" action="https://formspree.io/f/xqadzlbk" method="POST" style="display: flex; flex-direction: column; gap: 12px;">
+                                <input type="text" name="name" placeholder="Ваше имя" required style="padding: 12px; border: 1px solid #ccc; border-radius: 6px;">
+                                <input type="email" name="email" placeholder="Ваш email" required style="padding: 12px; border: 1px solid #ccc; border-radius: 6px;">
+                                <textarea name="message" placeholder="Ваше сообщение" required style="padding: 12px; height: 120px; border: 1px solid #ccc; border-radius: 6px;"></textarea>
+                                <input type="hidden" name="type" id="form-type" value="">
+                                <button type="submit" style="background: var(--remax-blue); color: white; border: none; padding: 12px 24px; border-radius: 8px; font-weight: 600; cursor: pointer;">
+                                    Отправить
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <button class="fab" id="fabButton" onclick="scrollToTop()">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M18 15l-6-6-6 6"/>
+        </svg>
+    </button>
+
+    <script>
+        // Navigation functionality
+        function initNavigation() {
+            const navItems = document.querySelectorAll('.nav-item');
+            const sections = document.querySelectorAll('section[id]');
+            const navContainer = document.getElementById('navContainer');
+            const fabButton = document.getElementById('fabButton');
+
+            // Smooth scrolling for navigation
+            navItems.forEach(item => {
+                item.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const targetId = item.getAttribute('href').substring(1);
+                    const targetSection = document.getElementById(targetId);
+                    
+                    if (targetSection) {
+                        const offsetTop = targetSection.offsetTop - 100;
+                        window.scrollTo({
+                            top: offsetTop,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+
+            // Active navigation highlighting and scroll effects
+            function updateNavigation() {
+                const scrollY = window.scrollY;
+                
+                // Add scrolled class to nav container
+                if (scrollY > 100) {
+                    navContainer.classList.add('scrolled');
+                    fabButton.classList.add('show');
+                } else {
+                    navContainer.classList.remove('scrolled');
+                    fabButton.classList.remove('show');
+                }
+
+                // Update active navigation item
+                let activeSection = '';
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop - 150;
+                    const sectionHeight = section.offsetHeight;
+                    
+                    if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
+                        activeSection = section.getAttribute('id');
+                    }
+                });
+
+                navItems.forEach(item => {
+                    item.classList.remove('active');
+                    if (item.getAttribute('href') === `#${activeSection}`) {
+                        item.classList.add('active');
+                    }
+                });
+            }
+
+            window.addEventListener('scroll', updateNavigation);
+            updateNavigation(); // Initial call
+        }
+
+        // Accordion functionality
+        function toggleAccordion(header) {
+            const accordion = header.parentElement;
+            const isOpen = accordion.classList.contains('open');
+            
+            // Close all accordions in the same section
+            const section = accordion.closest('.card');
+            section.querySelectorAll('.accordion').forEach(acc => {
+                acc.classList.remove('open');
+            });
+            
+            // Toggle current accordion
+            if (!isOpen) {
+                accordion.classList.add('open');
+            }
+        }
+
+        // Checklist functionality
+        function toggleChecklistItem(checkbox) {
+            const item = checkbox.closest('.checklist-item');
+            if (checkbox.checked) {
+                item.classList.add('completed');
+            } else {
+                item.classList.remove('completed');
+            }
+        }
+
+        // Scroll to top functionality
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+
+        // Intersection Observer for animations
+        function initAnimations() {
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, observerOptions);
+
+            // Observe all cards
+            document.querySelectorAll('.card').forEach(card => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(30px)';
+                card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                observer.observe(card);
+            });
+        }
+
+        // Enhanced hover effects for red rules
+        function initRedRuleEffects() {
+            const redRules = document.querySelectorAll('.red-rule');
+            
+            redRules.forEach(rule => {
+                rule.addEventListener('mouseenter', () => {
+                    redRules.forEach(otherRule => {
+                        if (otherRule !== rule) {
+                            otherRule.style.opacity = '0.7';
+                            otherRule.style.transform = 'scale(0.98)';
+                        }
+                    });
+                });
+                
+                rule.addEventListener('mouseleave', () => {
+                    redRules.forEach(otherRule => {
+                        otherRule.style.opacity = '1';
+                        otherRule.style.transform = 'scale(1)';
+                    });
+                });
+            });
+        }
+
+        // Initialize all functionality when DOM is loaded
+        document.addEventListener('DOMContentLoaded', () => {
+            initNavigation();
+            initAnimations();
+            initRedRuleEffects();
+            
+            // Add loading animation
+            document.body.style.opacity = '0';
+            setTimeout(() => {
+                document.body.style.transition = 'opacity 0.5s ease';
+                document.body.style.opacity = '1';
+            }, 100);
+        });
+
+        // Print functionality
+        function printPage() {
+            window.print();
+        }
+
+        // Keyboard navigation
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                // Close all accordions
+                document.querySelectorAll('.accordion.open').forEach(acc => {
+                    acc.classList.remove('open');
+                });
+            }
+        });
+
+    </script>
+
+    <script>
+        function openForm(type) {
+            document.getElementById('form-container').style.display = 'block';
+            document.getElementById('form-type').value = type;
+            document.getElementById('form-title').innerText =
+                type === 'violation' ? 'Сообщить о нарушении' : 'Задать вопрос';
+        }
+    </script>
+</body>
+</html>
+

@@ -1,0 +1,325 @@
+/* 
+ * RE/MAX Academy Kazakhstan Landing Page
+ * Additional Responsive Design Fixes
+ */
+
+/* Extra small devices (phones, 320px and up) */
+@media only screen and (min-width: 320px) and (max-width: 479px) {
+    /* Header adjustments */
+    .site-header {
+        padding: 10px 0;
+    }
+    
+    .logo img {
+        height: 30px;
+    }
+    
+    /* Hero section adjustments */
+    .hero-section {
+        min-height: 80vh;
+        padding-top: 100px;
+    }
+    
+    .hero-content h1 {
+        font-size: 24px;
+    }
+    
+    .hero-content h2 {
+        font-size: 16px;
+    }
+    
+    .hero-content p {
+        font-size: 14px;
+    }
+    
+    .btn-large {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+    
+    /* Value proposition adjustments */
+    .value-card {
+        padding: 15px;
+    }
+    
+    /* Program cards adjustments */
+    .program-card {
+        flex: 0 0 280px;
+    }
+    
+    .card-content h3 {
+        font-size: 16px;
+    }
+    
+    /* Instructor cards adjustments */
+    .instructor-image {
+        width: 120px;
+        height: 120px;
+    }
+    
+    /* Benefits section adjustments */
+    .benefit-card {
+        padding: 15px;
+    }
+    
+    /* Testimonial adjustments */
+    .testimonial-card {
+        padding: 15px;
+    }
+    
+    /* Enrollment section adjustments */
+    .enrollment-content {
+        gap: 20px;
+    }
+    
+    .program-options {
+        gap: 15px;
+    }
+    
+    /* FAQ adjustments */
+    .faq-question h3 {
+        font-size: 16px;
+    }
+    
+    /* Footer adjustments */
+    .footer-content {
+        gap: 20px;
+    }
+}
+
+/* Small devices (landscape phones, 480px and up) */
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+    /* Hero section adjustments */
+    .hero-content h1 {
+        font-size: 28px;
+    }
+    
+    /* Program cards adjustments */
+    .program-card {
+        flex: 0 0 320px;
+    }
+    
+    /* Enrollment steps adjustments */
+    .enrollment-steps {
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    /* Mobile menu for tablets */
+    .mobile-menu.active {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: var(--bg-dark);
+        padding: 20px;
+        border-bottom: 1px solid var(--border-color);
+        z-index: 1000;
+    }
+    
+    .mobile-menu .nav-links {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        margin-bottom: 20px;
+    }
+    
+    .mobile-menu .nav-actions {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+    }
+    
+    /* Program cards adjustments */
+    .program-cards {
+        gap: 15px;
+    }
+    
+    .program-card {
+        flex: 0 0 calc(50% - 15px);
+    }
+    
+    /* Instructor grid adjustments */
+    .instructor-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+    
+    /* Benefits grid adjustments */
+    .benefits-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+    
+    /* Testimonial adjustments */
+    .testimonial-card {
+        flex: 0 0 calc(100% - 30px);
+    }
+    
+    /* Enrollment content adjustments */
+    .enrollment-content {
+        flex-direction: column;
+        gap: 30px;
+    }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+    /* Program cards adjustments */
+    .program-cards {
+        gap: 20px;
+    }
+    
+    .program-card {
+        flex: 0 0 calc(33.333% - 20px);
+    }
+    
+    /* Instructor grid adjustments */
+    .instructor-grid {
+        gap: 25px;
+    }
+    
+    /* Benefits grid adjustments */
+    .benefits-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 25px;
+    }
+    
+    /* Testimonial adjustments */
+    .testimonial-card {
+        flex: 0 0 calc(50% - 30px);
+    }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    .container {
+        max-width: 1140px;
+    }
+    
+    /* Program cards adjustments */
+    .program-cards {
+        gap: 25px;
+    }
+    
+    .program-card {
+        flex: 0 0 calc(25% - 25px);
+    }
+    
+    /* Instructor grid adjustments */
+    .instructor-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+    }
+    
+    /* Benefits grid adjustments */
+    .benefits-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+    }
+}
+
+/* Mobile menu styles */
+.mobile-menu {
+    display: none;
+}
+
+.mobile-menu.active {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background-color: var(--bg-dark);
+    padding: 20px;
+    border-bottom: 1px solid var(--border-color);
+    z-index: 1000;
+    animation: slideDown 0.3s ease-out;
+}
+
+@keyframes slideDown {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Touch device optimizations */
+@media (hover: none) {
+    /* Make buttons larger for touch */
+    .btn {
+        padding: 12px 24px;
+    }
+    
+    /* Ensure instructor bios are accessible on touch */
+    .instructor-card .instructor-bio {
+        opacity: 1;
+        max-height: none;
+    }
+    
+    /* Improve FAQ touch targets */
+    .faq-question {
+        padding: 15px 0;
+    }
+    
+    /* Improve slider arrows for touch */
+    .slider-arrow {
+        width: 44px;
+        height: 44px;
+    }
+}
+
+/* Print styles */
+@media print {
+    .site-header, 
+    .hero-section, 
+    .testimonials-section, 
+    .enrollment-section, 
+    .site-footer {
+        display: none;
+    }
+    
+    body {
+        background-color: white;
+        color: black;
+    }
+    
+    .container {
+        width: 100%;
+        max-width: none;
+        padding: 0;
+    }
+    
+    .section-title {
+        color: black;
+    }
+    
+    .section-subtitle {
+        color: #333;
+    }
+    
+    .program-card, 
+    .instructor-card, 
+    .benefit-card {
+        break-inside: avoid;
+        page-break-inside: avoid;
+        background-color: white;
+        box-shadow: none;
+        border: 1px solid #ddd;
+    }
+    
+    .card-content p, 
+    .instructor-bio p, 
+    .benefit-card p {
+        color: #333;
+    }
+    
+    .faq-answer {
+        display: block !important;
+        color: #333;
+    }
+}

@@ -1,0 +1,235 @@
+/* REMAX Academy Kazakhstan Styles */
+:root {
+  --remax-red: #e61a1a;
+  --remax-blue: #0054a4;
+  --remax-dark-blue: #003366;
+  --remax-light-gray: #f5f5f5;
+  --remax-gray: #666666;
+  --remax-dark-gray: #333333;
+  --font-main: 'Roboto', Arial, sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-main);
+  line-height: 1.6;
+  color: var(--remax-dark-gray);
+  background-color: #ffffff;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+header {
+  background-color: #ffffff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  height: 60px;
+  margin-right: 15px;
+}
+
+.logo-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.logo-text h1 {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--remax-blue);
+  margin: 0;
+}
+
+.logo-text span {
+  font-size: 16px;
+  color: var(--remax-gray);
+}
+
+.back-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: var(--remax-blue);
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: 500;
+  transition: background-color 0.3s;
+}
+
+.back-button:hover {
+  background-color: var(--remax-dark-blue);
+}
+
+.document-header {
+  background-color: var(--remax-blue);
+  color: white;
+  padding: 40px 0;
+  text-align: center;
+}
+
+.document-header h1 {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.document-header .meta {
+  font-size: 16px;
+  opacity: 0.8;
+}
+
+.document-content {
+  padding: 40px 0;
+}
+
+.section {
+  margin-bottom: 30px;
+}
+
+.section-title {
+  font-size: 24px;
+  color: var(--remax-blue);
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid var(--remax-red);
+}
+
+.subsection-title {
+  font-size: 20px;
+  color: var(--remax-dark-blue);
+  margin: 25px 0 15px;
+}
+
+p {
+  margin-bottom: 15px;
+  text-align: justify;
+}
+
+.bold {
+  font-weight: 700;
+}
+
+.italic {
+  font-style: italic;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+}
+
+table, th, td {
+  border: 1px solid var(--remax-gray);
+}
+
+th, td {
+  padding: 12px;
+  text-align: left;
+}
+
+th {
+  background-color: var(--remax-light-gray);
+  color: var(--remax-dark-blue);
+}
+
+tr:nth-child(even) {
+  background-color: var(--remax-light-gray);
+}
+
+footer {
+  background-color: var(--remax-dark-blue);
+  color: white;
+  padding: 30px 0;
+  text-align: center;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-logo {
+  margin-bottom: 20px;
+}
+
+.footer-logo img {
+  height: 50px;
+}
+
+.copyright {
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .header-content {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .logo {
+    margin-bottom: 15px;
+  }
+  
+  .document-header h1 {
+    font-size: 26px;
+  }
+  
+  .section-title {
+    font-size: 22px;
+  }
+  
+  .subsection-title {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .document-header h1 {
+    font-size: 22px;
+  }
+  
+  .section-title {
+    font-size: 20px;
+  }
+  
+  .subsection-title {
+    font-size: 16px;
+  }
+  
+  table, th, td {
+    font-size: 14px;
+  }
+}
